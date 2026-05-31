@@ -67,7 +67,10 @@
   .card.flipped{transform:rotateY(180deg);}
   .card.dealing{animation:deal .9s cubic-bezier(.16,.84,.34,1);}
   @keyframes deal{0%{transform:translateY(40px) rotateY(180deg) scale(.92);opacity:0;}100%{transform:translateY(0) rotateY(180deg) scale(1);opacity:1;}}
-  .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:22px;overflow:hidden;box-shadow:0 30px 70px -20px rgba(0,0,0,.7),0 6px 22px rgba(0,0,0,.4);}
+  .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:22px;overflow:hidden;box-shadow:0 30px 70px -20px rgba(0,0,0,.7),0 6px 22px rgba(0,0,0,.4);transition:visibility 0s linear .5s;}
+  .card .front{visibility:hidden;}
+  .card.flipped .front{visibility:visible;}
+  .card.flipped .back{visibility:hidden;}
   .back{background:radial-gradient(120% 100% at 50% 0%, #22304f 0%, #161f36 55%, #0f1626 100%);border:1px solid rgba(216,177,94,.28);display:flex;align-items:center;justify-content:center;}
   .back .frame{position:absolute;inset:14px;border:1px solid rgba(216,177,94,.32);border-radius:14px;}
   .back .frame::after{content:"";position:absolute;inset:6px;border:1px solid rgba(216,177,94,.16);border-radius:10px;}
