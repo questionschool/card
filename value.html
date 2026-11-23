@@ -215,7 +215,7 @@
     <div class="modes">
       <button class="mode-btn active" data-mode="single">한 장 뽑기</button>
       <button class="mode-btn" data-mode="three">세 장 중 고르기</button>
-      <button class="mode-btn" data-mode="pyramid">올해의 핵심 가치</button>
+      <button class="mode-btn" data-mode="pyramid">새해의 핵심 가치</button>
       <button class="mode-btn" data-mode="all">52장 모두 보기</button>
       <button class="mode-btn" data-mode="write">가치 글쓰기</button>
     </div>
@@ -252,7 +252,7 @@
       </div>
       <div id="pyramidResult" class="hidden">
         <div class="capture" id="capture">
-          <div class="res-year" id="resYear">2026</div>
+          <div class="res-year" id="resYear">2027</div>
           <div class="res-title" id="resTitle">○○의 핵심 가치</div>
           <div class="pyr" id="pyr"></div>
           <div class="res-sentence" id="resSentence"></div>
@@ -350,7 +350,7 @@ const CARDS = [
   {n:"희망",e:"hope",d:"어떤 상황에서도 나아질 거라는 긍정적인 기대",act7:["이번 주 기대되는 일은 무엇인가요?","누구에게 희망의 말을 건네고 싶나요?","지금의 어려움 너머에 어떤 빛이 보이나요?","마음을 둘 작은 가능성 하나는 무엇인가요?","이번 주 희망을 느낀 순간은 언제였나요?","바라는 미래를 그림처럼 그린다면 어떤 모습인가요?","내일 분명 더 나아질 것은 무엇인가요?"]},
 ];
 
-const YEAR=new Date().getFullYear();
+const YEAR=2027;
 let userName="";
 let mode='single', lastIndex=-1, isFlipped=false;
 let detailBack=null; // 상세보기에서 돌아갈 함수
@@ -531,7 +531,7 @@ function showPyramidResult(){
 function resetPyramid(){
   selections=[];$('pyramidResult').classList.add('hidden');$('pyramidPick').classList.remove('hidden');
   $('drawBtn').classList.remove('hidden');$('saveBtn').classList.add('hidden');$('resetBtn').textContent="선택 초기화";
-  buildGrid();refreshGrid();$('meta').textContent="52가지 가운데 올해의 핵심 가치 여섯을 골라보세요.";
+  buildGrid();refreshGrid();$('meta').textContent="52가지 가운데 새해의 핵심 가치 여섯을 골라보세요.";
 }
 function backToPyramid(){
   $('card').classList.remove('flipped');isFlipped=false;hideViews();
@@ -638,7 +638,7 @@ function setMode(m){
   }else if(m==='pyramid'){
     $('pyramid').classList.remove('hidden');$('resetBtn').textContent="선택 초기화";selections=[];
     $('pyramidResult').classList.add('hidden');$('pyramidPick').classList.remove('hidden');
-    buildGrid();refreshGrid();$('meta').textContent="52가지 가운데 올해의 핵심 가치 여섯을 골라보세요.";
+    buildGrid();refreshGrid();$('meta').textContent="52가지 가운데 새해의 핵심 가치 여섯을 골라보세요.";
   }else if(m==='all'){
     $('allView').classList.remove('hidden');$('drawBtn').classList.add('hidden');$('resetBtn').classList.add('hidden');
     buildAllGrid();$('meta').textContent="52가지 가치를 모두 둘러보세요. 단어를 누르면 설명이 열립니다.";
