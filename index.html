@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>질문예술학교 카드</title>
+<title>모두의 질문 카드 · 질문예술학교</title>
 <meta name="theme-color" content="#0c111c">
 <meta name="description" content="마음을 여는 카드들. 질문예술학교가 건네는 카드 모음.">
 <meta property="og:title" content="질문예술학교 카드">
-<meta property="og:description" content="마음을 여는 카드들 — 오늘의 가치카드부터.">
+<meta property="og:description" content="오늘의 가치카드와 일터·학교생활 경험 나눔 질문 카드.">
 <meta property="og:image" content="https://card.questionschool.net/img/valuecard.png">
 <meta property="og:url" content="https://card.questionschool.net/">
 <meta property="og:type" content="website">
@@ -71,13 +71,15 @@
 
   @keyframes fadeDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
   @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+  .cards{width:min(94vw,1000px)}.collection-note{position:relative;margin-top:32px;text-align:center;font-size:14px;line-height:1.9;color:var(--text-soft)}
+  .card .c-go::after{content:none}a:focus-visible{outline:3px solid var(--gold);outline-offset:5px}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
   <header>
     <div class="glyph">✦</div>
     <div class="kicker">Question School</div>
-    <h1>질문예술학교 카드</h1>
+    <h1>모두의 질문 카드</h1>
     <p class="sub">마음을 여는 카드들 — 한 장을 골라 펼쳐보세요.</p>
   </header>
 
@@ -90,22 +92,22 @@
       <span class="c-go">카드 열기</span>
     </a>
 
-    <div class="card soon">
-      <span class="c-glyph">✶</span>
-      <span class="c-title">질문카드</span>
-      <span class="c-eng">Coming soon</span>
-      <span class="c-desc">곧 찾아옵니다.</span>
-      <span class="c-go">준비 중</span>
-    </div>
-
-    <div class="card soon">
-      <span class="c-glyph">✶</span>
-      <span class="c-title">다음 카드</span>
-      <span class="c-eng">Coming soon</span>
-      <span class="c-desc">새로운 카드가 이 자리에 더해집니다.</span>
-      <span class="c-go">준비 중</span>
-    </div>
+    <a class="card" href="/work/">
+      <span class="c-glyph">?</span>
+      <span class="c-title">일터 경험 나눔</span>
+      <span class="c-eng">After Work Question</span>
+      <span class="c-desc">보람과 어려움, 동료에게 고마웠던 순간까지. 15가지 질문으로 일터의 경험을 나눕니다.</span>
+      <span class="c-go">질문 한 장 뽑기</span>
+    </a>
+    <a class="card" href="/school/">
+      <span class="c-glyph">?</span>
+      <span class="c-title">학교생활 나눔</span>
+      <span class="c-eng">After School Question</span>
+      <span class="c-desc">배움과 친구, 오늘의 마음을 돌아보는 15가지 질문. 가족이나 친구와 함께 나눠 보세요.</span>
+      <span class="c-go">질문 한 장 뽑기</span>
+    </a>
   </main>
+  <p class="collection-note">재미삼아 시작한 작은 질문카드 실험입니다.<br>앞으로 다양한 질문카드를 하나씩 더 만들어 보려고 합니다.</p>
 
   <footer>질문예술학교 · <a href="https://questionschool.net">questionschool.net</a></footer>
 </body>
